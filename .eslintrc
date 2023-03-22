@@ -31,6 +31,7 @@
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-namespace": "off",
         "unused-imports/no-unused-imports": "error",
+        "react/react-in-jsx-scope": "off",
         "timbo-linter/expressions": [2, {
             "breakExpressions": [
                 "it"
@@ -45,9 +46,12 @@
                     "module",
 
                     // Path mapping order
+                    "/^@components/",
                     "/^@domain/",
                     "/^@shared/",
                     "/^@utils/",
+                    "/^@assets/",
+                    "/^@public/",
 
                     // Relative files order
                     "/.entity/",
