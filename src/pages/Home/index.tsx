@@ -111,7 +111,6 @@ const Home: React.FC = () => {
                 keyBoardControl={true}
                 transitionDuration={500}
                 containerClass="carousel-container"
-                removeArrowOnDeviceType={[ 'mobile' ]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
                 responsive={{
