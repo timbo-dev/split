@@ -1,10 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+import Error404 from './pages/404'
+import Home from './pages/Home'
+import { GlobalStyle } from './style/global'
+
+const root = createRoot(document.getElementById('root') as HTMLElement)
+
+root.render(
+    <BrowserRouter>
+        <GlobalStyle />
+        <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='*' element={<Error404/>} />
+        </Routes>
+    </BrowserRouter>
 )
