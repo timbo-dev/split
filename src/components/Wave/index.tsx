@@ -8,11 +8,12 @@ export interface IconProps {
     x: number
     y: number
     duration: number
+    id: string
 }
 
-export const Root: React.FC<RootProps> = ({children}) => {
+export const Root: React.FC<RootProps & {top: number}> = ({children, top}) => {
     return (
-        <Container>
+        <Container top={top}>
             {children}
         </Container>
     )

@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
         --gray-900: #121214;
         --white: #fff;
         --green: #1BD741;
+        --max-container-width: 1440px;
     }
 
     * {
@@ -24,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
        position: relative;
        width: 100%;
        height: 100%;
+       font-size: 62.5%;
     }
 
     h1 {
@@ -31,6 +33,14 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-weight: 700;
         font-size: 4.8rem;
+        line-height: 5.8rem;
+        color: var(--white)
+    }
+    h2 {
+        font-family: 'Exo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.8rem;
         line-height: 5.8rem;
         color: var(--white)
     }
@@ -48,6 +58,16 @@ export const GlobalStyle = createGlobalStyle`
        font-size: 62.5%;
        font-family: Arial;
        background: var(--aqua-200);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 750px) {
+        html {
+            font-size: 50%;
+        }
     }
 `
 export const Img = styled.div<ImgHTMLAttributes<string>>`

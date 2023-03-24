@@ -19,4 +19,10 @@ export const Container = styled.button`
     line-height: 21px;
     color: #FFFFFF;
     border: none;
+    cursor: pointer;
+    transition: background .3s;
+
+    &:hover {
+        background: #1ce444;
+    }
 `
