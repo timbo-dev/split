@@ -25,7 +25,7 @@
         "staged-tests": "npx vitest related --run",
         "test": "vitest",
         "preview": "vite preview",
-        "predeploy": "npm run build",
+        "predeploy": "npm run build && cp -r ./CNAME ./dist/CNAME",
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
