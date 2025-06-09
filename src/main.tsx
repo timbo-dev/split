@@ -10,7 +10,7 @@ root.render(
     <BrowserRouter>
         <GlobalStyle />
         <Routes>
-            <Route path='/split' element={<Home/>} />
+            <Route path='/' element={<Home/>} />
         </Routes>
     </BrowserRouter>
 )
