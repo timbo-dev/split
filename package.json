@@ -1,6 +1,7 @@
 {
     "name": "split",
     "private": true,
+    "homepage": "https://timbo-dev.github.io/split/",
     "version": "0.1.1",
     "type": "module",
     "main": "src/main.tsx",
@@ -23,7 +24,9 @@
         "staged-lint": "eslint",
         "staged-tests": "npx vitest related --run",
         "test": "vitest",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "react": "^18.2.0",
