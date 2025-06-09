@@ -1,0 +1,104 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+    ],
+    "ignorePatterns": [
+        "build",
+        "bin",
+        "**/*.d.ts"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "eslint-plugin-import-helpers",
+        "unused-imports",
+        "eslint-plugin-timbo-linter"
+    ],
+    "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "unused-imports/no-unused-imports": "error",
+        "react/react-in-jsx-scope": "off",
+        "timbo-linter/expressions": [2, {
+            "breakExpressions": [
+                "it"
+            ]
+        }],
+        "timbo-linter/class": [2],
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    "module",
+
+                    // Path mapping order
+                    "/^@components/",
+                    "/^@domain/",
+                    "/^@shared/",
+                    "/^@utils/",
+                    "/^@assets/",
+                    "/^@public/",
+
+                    // Relative files order
+                    "/.entity/",
+                    "/.handler/",
+                    "/.exception/",
+                    "/.type/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "always",
+            { "objectsInArrays": false }
+        ],
+        "comma-dangle": ["error", "never"],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1
+            }
+        ],
+
+        "newline-before-return": "error"
+    }
+}
